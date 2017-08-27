@@ -38,6 +38,7 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#">News Feeds</a>
+                        <a href="../">Submit an Article</a>
                     </li>
                 </ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -101,7 +102,7 @@
                 `;
 
     $(document).ready(function(){
-        $.get("http://165.227.73.242/get_data", function (data) {
+        $.get("http://newsensus.tech/get_data", function (data) {
 
             function getNewsArticles() {
 
@@ -123,7 +124,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "http://165.227.73.242/do_vote_endpoint/",
+                    url: "http://newsensus.tech/do_vote_endpoint/",
                     data: postData,
                     success: function(data){
                         console.log(data);
